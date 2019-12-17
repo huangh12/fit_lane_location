@@ -20,6 +20,7 @@ def solve_k_b(x, y):
     x_square_sum, x_sum, det = indicator(x)
     while det == 0:
         x = x[:-1]
+        y = y[:-1]
         x_square_sum, x_sum, det = indicator(x)
     N_ = len(x)
     k_ = np.sum(y * (N_*x-x_sum)) / det
